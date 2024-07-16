@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "json-server -p 3000 ./data/db.json --watch"
+    "start": "json-server --watch db.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages-deploy --branch master"
   },
   "author": "",
   "license": "ISC",
